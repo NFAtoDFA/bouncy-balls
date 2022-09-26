@@ -4,10 +4,10 @@ import pygame
 
 pygame.init()
 
-height =   700 #600
-width = 1200 #900
+height = 600
+width = 900
 border = 175
-balls = 1000
+balls = 50
 fps = 60
 
 #abilities
@@ -181,7 +181,7 @@ class sphere:
         if self.z <= 1:
             self.speed *= -0.95
             self.z = 1
-       
+      
     def reset(self):
         self.c = (random.randint(100,255),random.randint(100,255),random.randint(100,255))
         self.r = random.randint(20,30)
@@ -234,7 +234,8 @@ bottens = list()
 bottens.append(button('freeze','left Alt',freeze_cooldown))
 bottens.append(button('shapeshift','Y',shapeshift_cooldown))
 bottens.append(button('teleport','X',teleport_cooldown))
-bottens.append(button('testKraft','Z',3))
+#bottens.append(button('testKraft','Z',3))
+#bottens.append(button('ForJonas','U',1))
 #bottens.append(button('test1','2',15))
 
 bottens_r = list()
