@@ -4,10 +4,10 @@ import pygame
 
 pygame.init()
 
-height = 600
-width = 900
+height =   700 #600
+width = 1200 #900
 border = 175
-balls = 100
+balls = 1000
 fps = 60
 
 #abilities
@@ -234,11 +234,13 @@ bottens = list()
 bottens.append(button('freeze','left Alt',freeze_cooldown))
 bottens.append(button('shapeshift','Y',shapeshift_cooldown))
 bottens.append(button('teleport','X',teleport_cooldown))
+bottens.append(button('testKraft','Z',3))
 #bottens.append(button('test1','2',15))
 
 bottens_r = list()
 bottens_r.append(button('scan','none',scan_cooldown))
 bottens_r.append(button('dribble','none',dribble_cooldown))
+bottens_r.append(button('maustest','none',1))
 #bottens_r.append(button('test2','none',3))
 
 freezetimer = 0
@@ -305,6 +307,10 @@ def main_loop():
                 if event.key == pygame.K_LALT:
                     for button in bottens:
                         if button.name == 'freeze':
+                            button.action()
+                if event.key == pygame.K_z:
+                    for button in bottens:
+                        if button.name == 'testKraft':
                             button.action()
                 if event.key == pygame.K_y:
                     for button in bottens:
